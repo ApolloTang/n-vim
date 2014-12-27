@@ -1,0 +1,145 @@
+ yy is a synonym for y_. The y is doubled up to make it easier to type
+
+<verb><object>
+eg. yW
+
+using mark
+==========
+
+'a  // move to begining of line contain mark-register a
+`a  // move to mark-register a
+
+d`a // cut from here to mark-register a
+y`a // copy from here to mark-register a
+
+
+using register
+==============
+
+"by/foo // yank a copy of the text from here to the next ocurrence of
+        // "foo" into the 'b' register.
+
+
+"bp     // paste the content of b register *after* cursor
+"bP     // paste the content of b register *under* cursor
+
+
+command line
+============
+
+. // current line
+$ // last line
+
++ // offset after current line
+- // offset before current line
+
+:.,$j  // from the current line to the last line, join them all into one
+:%     // same as :1,$ (i.e., all the lines)
+
+
+
+:<...>g/re/<verb>  // is a prefix for "globally" applying a subsequent command
+                   // to all lines which match a pattern (regular expression) while
+:<...>v/re/<verb>   // applies such a command to all lines which do NOT match
+                   // the given pattern ("v" from "conVerse").
+
+
+:.,+21g/foo/d
+
+    from the current line through next 21 lines,
+    delete any lines containing the string "foo"
+
+:.,$v/bar/d
+
+    from here to the end of the file, delete any lines which
+    DON'T contain the string "bar."
+
+
+:g/re/p
+
+    "globally" "print" lines containing a "regular expression" (re)
+    ":g/re/p" is where the unix command "grep" came from !!
+
+    eg:
+        :g/\/\//p  // print all line with inline comment "\\"
+
+
+-----
+
+For example if you have a list and you want to separate all the
+stuff matching without deleting them, then you can use something
+like: :% g/foo/m$ ...  and all the "foo" lines will have been
+moved to the end of the file. (Note the other tip about using
+the end of your file as a scratch space). This will have preserved
+the relative order of all the "foo" lines while having extracted
+them from the rest of the list. (This would be equivalent to
+doing something like
+    1G!GGmap!Ggrep foo<ENTER>1G:1,'a g/foo'/
+ (copy the file to its own tail, filter the tail through grep
+ and delete all the stuff from the head).
+
+
+-----
+
+
+:% g/foo/s/bar/zzz/g -- for every line containing "foo" substitute all "bar" with "zzz."
+
+
+
+-----
+
+The : addresses can also refer to marks. Thus you can use: :'
+,'bg/foo/j to join any line containing the string foo to its
+subsequent line, if it lies between the lines between the 'a' and
+'b' marks.
+
+-----
+
+ :r foo inserts the contents of the file named "foo" at the current line.
+
+
+
+-----
+https://github.com/wellbredgrapefruit/vim_config
+
+-----
+
+
+select to the next matching parenthesis.
+
+    v% if the cursor is on the starting/ending parenthesis
+    vib if the cursor is inside the parenthesis block
+
+
+to select a curly brace block (very common on C-style languages):
+
+    viB
+    vi{
+
+
+you've got a visual selection and want to adjust it, o will hop
+to the other end. So you can move both the beginning and the
+end of the selection as much as you like
+
+
+Also vap to select the entire paragraph.
+
+
+-----
+
+Smart movements
+
+    * / #   search for the word under the cursor forward/backward.
+    w       to the next word
+    W       to the next space-separated word
+    b / e   to the begin/end of the current word. (B / E for space separated only)
+    gg / G  jump to the begin/end of the file.
+    %       jump to the matching { .. } or ( .. ), etc..
+    { / }   jump to next paragraph.
+    '.      jump back to last edited line.
+    g;      jump back to last edited position.
+
+
+
+
+
