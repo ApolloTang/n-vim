@@ -1,0 +1,44 @@
+5.3. Comments
+
+VIM also allows you to auto-format comments. You can split comments
+into 3 stages: The first part, the middle part and the end part
+ For example your coding style requirements may require comments
+to be in the following style
+
+	    /*
+	    * This is the comment
+	    */
+
+In such a case the following command can be used
+
+	    :set comments=sl:/*,mb:*,elx:*/
+
+Let me decipher the command for you. The commands has three parts
+ The first part is sl:/*. This tells VIM that three piece comments
+begin with /*. The next part tells VIM that the middle part of
+the comment is *. The last part of the command tells vim a couple
+of things. One that the command should end with */ and that it
+should automatically complete the comment when you hit just /.
+
+Let me give another example. Lets say your coding guidelines are as follows
+
+	    /*
+	    ** This is the comment
+	    */
+
+In such a situation you can use following command for comments
+
+	    :set comments=sl:/*,mb:**,elx:*
+
+to insert a comment just type /* and hit enter. The next line
+will automatically contain the **. After you've finished the
+comment just hit enter again and another ** will be inserted. However
+to end the comment you want a */ and not **/. VIM is quite clever
+here. You don't need to delete the last * and replace it with
+/. Instead, just hit / and VIM will recognise it as the end of
+the comment and will automatically change the line from ** to */.
+
+For more info hit :h comments
+
+ref:
+http://www.faqs.org/docs/Linux-HOWTO/C-editing-with-VIM-HOWTO.html#AEN274

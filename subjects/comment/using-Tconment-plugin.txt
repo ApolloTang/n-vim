@@ -1,0 +1,32 @@
+:: block commenting
+
+    add comment:
+        visual selection content
+        <c-_>b
+
+    remove comment:
+        vac
+        <c-_>b
+
+    note: for vac to work you need to set correct filetype and syntax
+
+
+:: inline c style comment of word
+
+    add comment:
+        gciw
+
+    remove comment:
+        g<ac
+        ds/      <-- using surround:
+
+
+inline comment selected
+
+    <c-_><c-_>
+
+    also use above to inplace of gcc and <visual>gc
+
+
+
+
