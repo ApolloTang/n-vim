@@ -1,0 +1,36 @@
+convert tabs to spaces
+
+	:set expandtab
+	:retab!
+
+
+convert sapce to tabs:
+
+	:set noexpandtab
+	:retab!
+
+
+strip trailing whitespace
+
+	:%s/\s\+$//e
+
+	:         enter command mode
+	%         entire file should be effected
+	s         substitude
+	\s        white space charater
+	\+$       one or more should be match preceding line end
+	e         supresses error message
+
+
+
+Delete blank lines:
+
+	:g/^$/d
+
+	:g       command to apply on the entire file
+	^$       target to apply the command is blank line
+	d        ex command is delete
+
+
+
+http://vimcasts.org/episodes/tidying-whitespace/
