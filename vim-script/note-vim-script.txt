@@ -1,0 +1,102 @@
+Reference
+---------
+
+    : help vim-script-intro
+    http://www.ibm.com/developerworks/library/l-vim-script-1/
+    http://learnvimscriptthehardway.stevelosh.com/
+    http://vimdoc.sourceforge.net/htmldoc/usr_41.html
+
+vim scripts invocation:
+-----------------------
+
+    Running a script file:
+
+        :source /full/path/to/the/scriptfile.vim
+
+
+    Type scripting commands directly on the Vim command line:
+
+        :call MyBackupFunc(expand('%'), { 'all':1, 'save':'recent'})
+
+    Running with keyboard mapping:
+
+        :nmap ;s :source /full/path/to/the/scriptfile.vim<CR>
+        :nmap \b :call MyBackupFunc(expand('%'), { 'all': 1 })<CR>
+
+    in the above, ;s will execute the specified script file, and
+    a \b sequence will call the MyBackupFunc()
+
+
+variables:
+----------
+
+    http://vim.wikia.com/wiki/Displaying_the_current_Vim_environment
+
+Example: toggling syntax highlighting:
+
+        function! ToggleSyntax()       "[1]
+           if exists("g:syntax_on")    "[2]
+              syntax off               "[3]
+           else
+              syntax enable
+           endif
+        endfunction
+
+        nmap <silent>  ;s  :call ToggleSyntax()<CR> "[4]
+
+    [1] defining a function named ToggleSyntax(), which takes
+        no arguments.
+
+    [2] calls a built-in Vim function named exists(), passing
+        it a string. The exists() function determines whether
+        a variable with the name specified by the string (the
+        global variable g:syntax_on) has been defined.
+
+    [3] "syntax enable" defines the g:syntax_on variable, and
+        "syntax off" undefines it, calling the ToggleSyntax()
+        function repeatedly alternates between enabling and disabling
+        syntax highlighting.
+
+        • see :help syntax-on
+        • "syntax is a vim build-in colon command -- every
+          build-in colon comand is available as a statement in
+          Vimscript.
+
+    [4] Set up a key sequence ";s" to call the ToggleSyntax()
+        function.
+
+        •  "nmap" stands for "normal-mode key mapping."
+        •  The "<silent>" option after the "nmap" causes the mapping
+           not to echo any command it's executing  -- this ensuring that
+           the ";s" command will do its work unobtrusively --
+           this is how you can call a function in Vimscript and
+           ignore the return value.
+        •  <CR> at the end is the literal sequence of characters
+           <,C,R,>. which is equivalent to a literal carriage
+           return of "unprintable character".
+           To see the complete list of "unprinteable character":
+
+               :help: keycodes
+
+
+Example: Creating centered titles
+
+    Function that capitalizes each word on the current line, centers
+    the entire line, and then jumps to the next line,
+
+        function! CapitalizeCenterAndMoveDown()
+           s/\<./\u&/g   "[1]
+           center        "[2]
+           +1            "[3]
+        endfunction
+
+        nmap <silent>  \C  :call CapitalizeCenterAndMoveDown()<CR>
+
+    [1] Built-in substitution capitalizes each word
+    [2] Built-in center command centers entire line
+       • see :help center
+    [3] Built-in relative motion (+1 line down)
+
+
+
+
