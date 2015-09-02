@@ -1,0 +1,65 @@
+
+Sequence of letter separeated with a white space form a word
+
+    word word word word word
+
+Sequence of letter separeated with a sequence of white space form a word
+
+    word   word     word   word word
+
+Sequence of letter and digits separeated with a sequence of white space form a word
+
+    22word        22word    22word  22word
+    word22  word22    word22   word22
+    22word22  22word22    22word22      22word22
+    22w22ord22    22wo22rd22    22wo22rd22   22wo22rd22
+
+Sequence of punctuations separeated with a sequence of  white space form a word
+
+    ,,,  ...  ;;;  :::
+
+    ()  []  {} ,.;: ,.:;
+
+    ()[]{},.;:,.:;  ()[]{},.;:,.:;  ()[]{},.;:,.:;  ()[]{},.;:,.:;
+
+    |\-=,.!@#$%^&*+?/ dsfe |\-=,.!@#$%^&*+?/ dsfe |\-=,.!@#$%^&*+?/ dsfe
+
+
+Underscore is not a punctuations
+
+    _|\-=,.!@#$%^&*+?/  _dsfe  _|\-=,.!@#$%^&*+?/  _dsfe  _|\-=,.!@#$%^&*+?/   _dsfe
+    |\-=,.!@#$%^&*+?/_  dsfe_  |\-=,.!@#$%^&*+?/_  dsfe_  |\-=,.!@#$%^&*+?/_   dsfe_
+    |\-=,.!@#$_%^&*+?/  dsf_e  |\-=,.!@#_$%^&*+?/  dsf_e  |\-=,.!@_#$%^&*+?/   _dsfe
+
+
+Space is not required to form word boundary between sequence of
+letter/digit/underscore and punctuation
+
+    ()[]{},.;:,.:;word  ()[]{},.;:,.:;word  ()[]{},.;:,.:;word  ()[]{},.;:,.:;word
+    word()[]{},.;:,.:;  word()[]{},.;:,.:;  word()[]{},.;:,.:;  word()[]{},.;:,.:;
+
+    ()[]{},.;;9wo_rd_  ()[]{},.;;9wo_rd_  ()[]{},.;;9wo_rd_  ()[]{},.;;9wo_rd_
+    9wo_rd_)[]{'},.;;  9wo_rd_)[]{'},.;;  9wo_rd_)[]{'},.;;  9wo_rd_)[]{'},.;;
+
+    word,  word.  word;  word:  word"  word'  word(  word)  word[  word]
+    ,word  .word  ;word  :word  "word  'word  (word  )word  [word  [word
+
+    w88d,  w88d.  w88d;  w88d:  w88d"  w88d'  w88d(  w88d)  w88d[  w88d]
+    ,w88d  .w88d  ;w88d  :w88d  "w88d  'w88d  (w88d  )w88d  [w88d  [w88d
+
+    (word)(word)(word)(word)(word)(word)
+    (word) (word) (word) (word) (word) (word)
+
+    ( word )( word )( word )( word )( word )( word )
+    ( word )( word )( word )( word )( word )( word )
+
+
+
+,,
+l l ,,
+,.;:"'(){}
+l9,8 l9.8 l9;8 l9:8 l9"8 l9'8 l9(8 l9)8
+
+l,8 l.8 l;8 l:8 l"8 l'8 l(8 l)8
+
+l_ ,.;:"'  ldsf _232 l,; lkfj lksdjf *($) l. sdfl1k.;
