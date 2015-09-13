@@ -1,0 +1,35 @@
+ctrl+]           go to tag ( hyperlink)
+ctrl+t, ctrl-o   pop off the tag stack
+
+:help ctrl-a    // no prefix is normal mode
+:help i_ctrl-a  // prefix for desired mode
+:help <keyword-to-search> ctrl-d    // list item contain keyword you want to search
+
+append three same charector at the end of line:
+
+        A!!!<ESC>
+
+    better
+
+        3A!<ESC>
+
+    tips:
+        when type when you are thinking of the action append.
+        begin typing when you think of the number of time you want to repeat
+        A3! won't work because it will append '3!'
+
+
+ctrl-f is suppose to be scrolling window [count] page, but it has
+already [vn]map to "*p, but can you the equivilent <shift-arrowDown>
+
+To remove space arround 'hello' in ( hello ), [ hello ], { hello } use
+cs(), cs[], and cs{}
+
+does not work on " hello "
+
+
+
+
+
+
+
