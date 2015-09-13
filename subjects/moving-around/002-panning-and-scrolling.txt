@@ -1,0 +1,24 @@
+
+:: Panning
+
+    Reposition current line with cursor  (compatible mode)
+
+    z[enter]  to top of screen
+    z.        to middle of screen
+    z-        to bottom of screen
+
+
+:: Scrolling
+
+  • move cursor full paging
+
+        ctr-F   ctr-B
+
+        But I have map
+            ctr-F to "*y
+            ctr-B to "*P
+
+  • move cursor half paging
+
+        ctr-U   ctr-D
+
