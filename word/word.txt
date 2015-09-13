@@ -47,8 +47,22 @@ letter/digit/underscore and punctuation
     w88d,  w88d.  w88d;  w88d:  w88d"  w88d'  w88d(  w88d)  w88d[  w88d]
     ,w88d  .w88d  ;w88d  :w88d  "w88d  'w88d  (w88d  )w88d  [w88d  [w88d
 
+Surround
+
+    'word' 'word' 'word''word'   'word''word''word' 'word'
+    ' word ' ' word ' ' word '' word '   ' word '' word '' word ' ' word '
+
+    "word" "word" "word""word"   "word""word""word" "word"
+    " word " " word " " word "" word "   " word "" word "" word " " word "
+
+    {word} {word} {word}{word}   {word}{word}{word} {word}
+    { word } { word } { word }{ word }   { word }{ word }{ word } {word}
+
+    [ word ] [ word ] [ word ][ word ]   [ word ][ word ][ word ] [ word ]
+    [word] [word] [word][word]   [word][word][word] [word]
+
     (word)(word)(word)(word)(word)(word)
-    (word) (word) (word) (word) (word) (word)
+    (word) (word)(word)    (word)(word) (word)
 
     ( word )( word )( word )( word )( word )( word )
     ( word )( word )( word )( word )( word )( word )
