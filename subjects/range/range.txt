@@ -1,0 +1,40 @@
+type  ":help 10.3" for range documentation
+
+"1,$" is synonim to "%"
+
+Using a pattern in a range:
+
+    Perform subtitution between lines contains "section 1" and "section 2"
+    (inclusive).
+
+        :/section 1/,/section 2/:s/hello/bye/gc
+
+    All lines between Section 1 and Section 2, non-inclusively, i.e. the lines
+    containing Section 1 and Section 2 will not be affected.
+
+        :/section 1/+,/section 2/-:s/hello/bye/gc
+
+
+
+    The /pattern/ and ?pattern? may be followed by another address separated by a
+    semicolon. A semicolon between two search patterns tells Vim to find the
+    location of the first pattern, then start searching from that location for the
+    second pattern.
+
+        /Section 1/;/Subsection/-,/Subsection/+
+
+        first find Section 1, then the first line with Subsection, step one
+        line up (beginning of the range) and find the next line with
+        Subsection, step one line down (end of the range).
+
+    The next example shows how you can reuse you search pattern:
+
+
+    Search for the Section line and yank (copy) one line after into the memory.
+
+        :/Section/+ y
+
+    Search for the next Section line and put (paste) the saved text on the next line.
+
+        :// normal P
+
