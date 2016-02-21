@@ -1,0 +1,14 @@
+Open a buffer as a vertical split:
+
+open a left vertical split (by default).
+    :vert sb <N>
+    :vsp | b<N>
+
+To open a split to the right, on the other hand:
+    :vert belowright sb <N>
+
+Ref:
+http://stackoverflow.com/questions/4571494/open-a-buffer-as-a-vertical-split-in-vim
+
+
+

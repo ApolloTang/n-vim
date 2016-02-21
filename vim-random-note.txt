@@ -28,6 +28,17 @@ cs(), cs[], and cs{}
 does not work on " hello "
 
 
+To figure out
+=============
+
+  • set immutable pwd
+  • font weight of status line
+  • auto underline the above line of text
+
+
+
+
+
 
 
 
