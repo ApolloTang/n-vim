@@ -1,0 +1,22 @@
+
+
+Ref: http://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim
+
+    When Searching, \n and \r behave as you expected:
+
+        \n is newline, \r is CR (carriage return = Ctrl-M = ^M)
+
+    When Replacing, \n and \r is NOT what you have expected:
+
+        \r is newline, \n is a null byte (0x00).
+
+    A quick summary
+    ```````````````
+                    | searching | replacment |
+ ---------------------------------------------
+            newline | \n        | \r         |
+    carriage return | \r        | don't know |
+
+
+
+

@@ -1,0 +1,17 @@
+
+
+  Charriage return | [CR] | \r | \x0D | U+000D |
+Line feed/New Line | [LF] | \n | \x0A | U+000A |
+
+End of line of common os:
+-------------------------
+     Unix: \n
+      Mac: \r
+      DOS: \r\n
+
+
+
+
+
+
+
