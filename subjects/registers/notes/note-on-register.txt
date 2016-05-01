@@ -1,0 +1,32 @@
+X11 Global store
+    1. selections (own by application)
+        1a. PRIMARY (use by "*, copy/paste w mouse highlight/middle button)
+        1b. SECONDARY (ill-defiened x11 spec, not use by vim)
+        1c. CLIPBOARD (use by "+, used by application cut/copy/paste, not available in xterm)
+    2. cut-buffers (own by x-server)
+        There are 8 cut-buffers: CUT_BUFFER0..CUT_BUFFER7
+
+
+
+You can :set clipboard=unnamed or :set clipboard=unnamedplus to make 
+all yanking/deleting operations automatically copy to the system clipboard. 
+This could be an inconvenience in some cases where you have already storing 
+something else in the clipboard as it will override it.
+
+
+Here are how my registed are use currently:
+    "" recent d, c, s, x, y
+    "0 recent yank
+    "1 recent (line) delete
+    "* recent yank and delete (with :set clipboard=unamed)
+    "- recent delete less then one line
+
+Copying/pasting from the system clipboard will not work if 
+    :echo has('clipboard') returns 0.
+
+Ref:
+:help clipboard
+:help registers
+:help x11-selection
+:help copy-move
+http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
