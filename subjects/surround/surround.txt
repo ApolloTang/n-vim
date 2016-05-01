@@ -1,0 +1,18 @@
+
+How to remove c style comment with surround
+
+    /* some text */
+       ^^^^^^^^^
+       'ds/' to remove /* */
+
+    ref: https://github.com/tpope/vim-surround/issues/147
+
+
+How to trim white spaces with surround
+
+    ( some text )
+      ^^^^^^^^^
+    cs() will result in (some text)
+
+    ref: http://stackoverflow.com/questions/9480452/delete-surrounding-whitespace-in-vim
+
