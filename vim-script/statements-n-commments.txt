@@ -1,0 +1,49 @@
+Vimscript statements
+====================
+
+  • all statements are terminated by newline
+  • statements continuation marker is a single backslash at the
+    begining of the lined continued
+
+        call SetName(
+        \   first_name,
+        \   middle_initial,
+        \   family_name
+        \ )
+
+  • statements deliminator is a pipe charector (not the semicolon [1])
+
+        echo "Staring..." | call Phase(1) | call Phase(2) | echo "Done"
+
+[1] semicolon has meaning at the start of a command:
+    it is a part of the command's line range "from the current line to...
+
+Comments
+========
+
+    Comments start with a double-qoute and end at the end of line:
+
+        if exists("g:syntax_on")
+            syntaxoff      "Not 'syntax clear' (which does something else)
+        else
+            syntaxenable   "Not 'syntax on' (which overrides colorscheme)
+        endif
+
+    [!] However, double-quote also used to enclose strings, which
+        take precedence over command. This means you can't put
+        a comment anywhere that a string might be expected:
+
+            echo "> " "Print a prompt
+                                     ^--- missing closing double-quote
+
+        In the above, the echo command expected a forth double-quote
+        to close of second string, and produce error
+
+        To get around this situation you can use delimiter:
+
+            echo "> " | "Print a prompt
+
+
+
+
+

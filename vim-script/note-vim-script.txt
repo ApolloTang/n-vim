@@ -27,10 +27,6 @@ vim scripts invocation:
     a \b sequence will call the MyBackupFunc()
 
 
-variables:
-----------
-
-    http://vim.wikia.com/wiki/Displaying_the_current_Vim_environment
 
 Example: toggling syntax highlighting:
 

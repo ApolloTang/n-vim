@@ -1,0 +1,128 @@
+
+variables:
+----------
+
+    Variable assignment in Vimscript requires a special keyword, let:
+
+        let name = "Damian"
+        let height = 165
+        let interests = [ 'Cinema', 'Literature', 'World Domination', 101 ]
+        let phone = { 'cell':5551017346, 'home':5558038728, 'work':'?' }
+
+
+    more reference:
+    http://vim.wikia.com/wiki/Displaying_the_current_Vim_environment
+
+
+Type:
+=====
+
+    Values in Vimscript are typically one of the following three types:
+
+    Scalar:
+    ------
+
+        A single value, such as a string or a number. For example:
+
+            "Damian" or 165
+
+    List:
+    -----
+
+        An ordered sequence of values delimited by square brackets
+        with implicit integer indices starting at zero.  For example:
+
+            ['Cinema', 'Literature', 'WorldDomination', 101]
+
+    Dictionary:
+    -----------
+
+        An unordered set of values delimited by braces, with
+        explicit string keys. For example:
+
+            {
+                'cell':5551017346,
+                'home':5558038728,
+                'work':'?'
+            }
+
+    About List and Dictionary:
+
+        Values in a list or dictionary don't have to be all of
+        the same type; you can mix strings, numbers, and even
+        nested lists and dictionaries.
+
+
+    About String
+
+        Strings can be specified with either double­quotes or single­quotes
+        as delimiters.
+
+        * Double­quoted * strings honor special "escape sequences":
+
+            "\n"     (for newline),
+            "\t"     (for tab),
+            "\u263A" (for Unicode smiley face)
+            "\<ESC>" (for the escape character)
+
+        * Single­quoted * strings treat everything inside their delimiters
+        as literal characters, with the eception that:
+
+            [!] two consecutive single­quotes are treated as a literal
+                single­quote.
+
+
+
+    [!] Variables have no inherent type, They take on the type of
+        first value assigned to them -- onece assigned are permanent
+        and strickly enforced at runtime:
+
+           let myList = [ 'Cinema', 'Literature', 'World Domination', 101 ]
+           let myList = "String ABC"  " Error: variable type mismatch for: myList
+
+
+
+Scope of variable
+=================
+
+  • By default, a variable is scoped to the function in which
+    it is first assigned to,
+
+  • or is global if its first assignment occurs outside any function.
+
+  • However, variables may also be explicitly declared as belonging
+    to other scopes, using a variety of prefixes, as summarized
+    as following:
+
+    Vimscript variable scoping
+
+    Prefix     Meaning
+    g:varname  The variable is global
+    s:varname  The variable is local to the current script file
+    w:varname  The variable is local to the current editor window
+    t:varname  The variable is local to the current editor tab
+    b:varname  The variable is local to the current editor buffer
+    l:varname  The variable is local to the current function
+    a:varname  The variable is a parameter of the current function
+    v:varname  The variable is one that Vim predefines
+
+
+    Vimscript pseudovariables
+    -------------------------
+    pseudovariables that scripts can use to access the other
+    types of value containers that Vim provides.
+
+    Prefix      Meaning
+    &varname    A Vim option (local option if defined, otherwise global)
+    &l:varname  A local Vim option
+    &g:varname  A global Vim option
+    @varname    A Vim register
+    $varname    An environment variable
+
+    example:
+
+        Set up two key­maps to increase or decrease the current
+        tabspacing:
+
+            nmap <silent> ]] :let &tabstop += 1<CR>
+            nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0<CR>

@@ -1,0 +1,24 @@
+
+
+Only the numeric value zero is false in a boolean context;
+any non­zero numeric value—whether positive or negative—is considered
+true.
+
+However, all the logical and comparison operators consistently
+return the value 1 for true.
+
+When a string is used as a boolean, it is first converted to
+an integer, and then evaluated for truth (non­zero) or falsehood
+(zero).
+
+This implies that the vast majority of strings (including
+most non­empty strings) will evaluate as being false. A typical
+mistake is to test for an empty string like so:
+
+
+    let result_string = GetResult();
+    if !result_string
+        echo "No result"
+    endif
+
+

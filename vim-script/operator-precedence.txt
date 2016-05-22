@@ -1,0 +1,47 @@
+Operator precedence table
+=============================
+( bottom of the table has higher precedence)
+
+    Operation                      Operator syntax
+    ------------------------------------------------------
+
+    Assignment                     let var=expr
+    Numeric­add­and­assign         let var+=expr
+    Numeric­subtract­and­assign    let var­=expr
+    String­concatenate­and­assign  let var.=expr
+
+    ------------------------------------------------------
+
+    Ternary operator               bool?expr­if­true:expr­if­false
+    Logical OR                     bool||bool
+    Logical AND                    bool&&bool
+
+    ------------------------------------------------------
+
+    expr==expr                     Numeric or string equality
+    expr!=expr                     Numeric or string inequality
+    expr>expr                      Numeric or string greater­then
+    expr>=expr                     Numeric or string greater­or­equal
+    expr<expr                      Numeric or string less than
+    expr<=expr                     Numeric or string less­or­equal
+
+    ------------------------------------------------------
+
+    Numeric addition               num+num
+    Numeric subtraction            num­num
+    String concatenation           str.str
+
+    ------------------------------------------------------
+
+    Numeric multiplication         num*num
+    Numeric division               num/num
+    Numeric modulus                num%num
+
+    ------------------------------------------------------
+
+    Convert to number              +num
+    Numeric negation               ­num
+    Logical NOT                    !bool
+    Parenthetical precedence       (expr)
+
+    ------------------------------------------------------
