@@ -1,7 +1,7 @@
 
-
-  Charriage return | [CR] | \r | \x0D | U+000D |
-Line feed/New Line | [LF] | \n | \x0A | U+000A |
+                   | char | c  |  Hex | uni-code | Oct | Dec |
+  Charriage return | [CR] | \r | \x0D | U+000D   |  15 |  13 |
+Line feed/New Line | [LF] | \n | \x0A | U+000A   |  12 |  10 |
 
 End of line of common os:
 -------------------------

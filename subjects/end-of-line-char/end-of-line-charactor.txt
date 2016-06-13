@@ -4,7 +4,7 @@ Unix, Windows, and MAC all use different end of line (EOL) character.
 
 Vim typically figures out the fileformat for you automatically. A file with
 
-\r\n  --> dos           [CR]{LF}
+\r\n  --> dos           [CR][LF]
 \r    --> clasical mac
 \n    --> unix/mac
 
@@ -36,6 +36,9 @@ ref http://cs.clarku.edu/resources/vim.shtml
     to a file OUTFILE in Unix format by calling:
 
         > tr -d '\15' < INFILE > OUTFILE
+
+    where \15 is \r in Oct
+
 
 
 ::: FTP and line ending
