@@ -8,20 +8,57 @@ X11 Global store
 
 
 
-You can :set clipboard=unnamed or :set clipboard=unnamedplus to make 
-all yanking/deleting operations automatically copy to the system clipboard. 
-This could be an inconvenience in some cases where you have already storing 
+You can :set clipboard=unnamed or :set clipboard=unnamedplus to make
+all yanking/deleting operations automatically copy to the system clipboard.
+This could be an inconvenience in some cases where you have already storing
 something else in the clipboard as it will override it.
 
 
-Here are how my registed are use currently:
-    "" recent d, c, s, x, y
-    "0 recent yank
+Here are how registed are use:
+
+"" the unamed register:
+-----------------------
+
+   [copying to unnamed reg]
+
+       The unamed register will fill with:
+
+          • text deleted with "d", "dd", "c", "s", "x", "X", "r" commands
+          • text copy with "y", "yy"
+
+       Text are copy to this register regardless of whether or not
+       other register was used ( however, one exception is the '_' register).
+
+   [pasting from unname reg]
+
+        When pasting text with 'P' or 'p" command without specify a register,
+        the content of unname register is paste to your buffer.
+
+        Although unecessary, you can specfiy unamed register
+        with double quote with 'p' or 'P' like '""P' or '""p'.
+
+The number register: "0 to "9
+-----------------------------
+
+ • Numbered register 0 contains the text from the most recent yank command ('y' or 'yy').
+ • Numbered register 1 contains the text form the most recent deleted *LINE* or change *LINE* command.
+
+       However, the above will not happened if the commands (yanks, deleted line or change line)
+       specified a specific register. In this case, text will go to the specified register.
+
+       Note that, the above mentioned "*LINE*". If the deletion is less than a line,
+       the text goes to '-', teh small deletion buffer.
+
+
+
+
+
+
     "1 recent (line) delete
     "* recent yank and delete (with :set clipboard=unamed)
     "- recent delete less then one line
 
-Copying/pasting from the system clipboard will not work if 
+Copying/pasting from the system clipboard will not work if
     :echo has('clipboard') returns 0.
 
 Ref:
