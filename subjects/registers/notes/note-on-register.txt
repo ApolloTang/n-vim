@@ -74,7 +74,6 @@ http://usevim.com/2012/04/13/registers/
 ------------------------------------------------------------------------------------------------------
 
 
-
     Behaviour of deleting without specified register
     ````````````````````````````````````````````````
 
@@ -111,16 +110,44 @@ http://usevim.com/2012/04/13/registers/
 
                 step 2
                     12345689
-                    XabXdefgh
-                    ^>>>>>>>
+                    ?abXdefgh
+                     >>>>>>>>
 
-        "ax  fills: " "1 "a
-        "bx  fills: " "1 "b
+                step 3
+                    12345689
+                    XabXdefgh
+                    ^
+
+
+        Special case for "0
+
+            before "0x
+                    012345689
+                    ?abcdefgh
+
+            after  "0x
+                step 1
+                    012345689
+                    Xabcdefgh
+                    ^
+
+                step 2
+                    012345689
+                    ?Xabcdefgh
+                     >>>>>>>>
+
+                step 3
+                    012345689
+                    XXabcdefgh
+                    ^>>>>>>>>>
+
 
 
 
 ------ below are draft --------
 
+        "ax  fills: " "1 "a
+        "bx  fills: " "1 "b
 
 The following will fill the specified register "R and "_ (where R is 1-9a-zA-Z)
 
