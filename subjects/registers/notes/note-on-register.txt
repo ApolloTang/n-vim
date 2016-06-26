@@ -14,19 +14,21 @@ This could be an inconvenience in some cases where you have already storing
 something else in the clipboard as it will override it.
 
 
+
 Here are how registed are use:
 
 "" the unamed register:
 -----------------------
 
-   [copying to unnamed reg]
+    filling the unnamed reg
+    ```````````````````````
 
        The unamed register will fill with:
 
           • text deleted with "d", "dd", "c", "s", "x", "X", "r" commands
           • text copy with "y", "yy"
 
-       Text are copy to this register regardless of whether or not
+       Text are copy to this register *regardless* of whether or not
        other register was used ( however, one exception is the '_' register).
 
    [pasting from unname reg]
@@ -36,6 +38,7 @@ Here are how registed are use:
 
         Although unecessary, you can specfiy unamed register
         with double quote with 'p' or 'P' like '""P' or '""p'.
+
 
 The number register: "0 to "9
 -----------------------------
@@ -67,3 +70,60 @@ Ref:
 :help x11-selection
 :help copy-move
 http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
+http://usevim.com/2012/04/13/registers/
+------------------------------------------------------------------------------------------------------
+
+
+
+    Behaviour of deleting without specified register
+    ````````````````````````````````````````````````
+
+        The following will fill "unnamed and "_ :
+
+            x
+            {visual}d
+            {visual}x
+
+
+    If you specified a register the behaviour is different:
+
+    Behaviour of 'x' to numbered register
+    `````````````````````````````````````
+
+        "0x  fills: " "1 "0
+        "1x  fills: " "1 "2
+        "2x  fills: " "1 "3
+        "3x  fills: " "1 "4
+
+        The resulting pattern is: "Nx  fills: " "1 "(N+1)
+
+        Here is the internal mechanism:
+
+            before "3x
+                    12345689
+                    abcdefgh
+
+            after "3x
+                step 1
+                    12345689
+                    abXdefgh
+                      ^
+
+                step 2
+                    12345689
+                    XabXdefgh
+                    ^>>>>>>>
+
+        "ax  fills: " "1 "a
+        "bx  fills: " "1 "b
+
+
+
+------ below are draft --------
+
+
+The following will fill the specified register "R and "_ (where R is 1-9a-zA-Z)
+
+    can do "0x but cannot do "0d
+
+
