@@ -15,8 +15,8 @@
         ctr-F   ctr-B
 
         But I have map
-            ctr-F to "*y
-            ctr-B to "*P
+            ctr-B to "*y
+            ctr-F to "*P
 
   • move cursor half paging
 
