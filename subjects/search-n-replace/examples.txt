@@ -1,0 +1,20 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+replace "</div>" with ">/span<“
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  %s/<\/div>/>\span</gc
+  %s@<\/div>@>/span<@gc
+
+  replace '/a/b/c/' with '/x/y/z/'
+
+  %s/\/a\/b\/c\//\/x\/y\/z\//gc
+  %s@\/a\/b\/c\/@\/x\/y\/z\/@gc
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Handling escaping backslash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  replace "\n\n" with "\r\r"
+
+  %s/\\r\\r/\\n\\n/gc

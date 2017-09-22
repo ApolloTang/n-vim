@@ -1,0 +1,17 @@
+
+If you are using Vim 7.4 or later, in normal mode, put your cursor
+below the URL, then click gx, the URL will be opened in browser automatic
+
+https://stackoverflow.com/questions/9458294/open-url-under-cursor-in-vim-with-browser
+
+Work also with various file type:
+
+  relative path:
+  file://\./demo/randu17_rgb.png
+
+  absolute path:
+  file:///Users/apollotang/1/1-a/30-basic/vim/n-vim/how-to/open-link-in-browser/demo/randu17_rgb.png
+
+
+
+

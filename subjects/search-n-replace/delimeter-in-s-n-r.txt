@@ -1,0 +1,19 @@
+
+
+The character after the 's' is taken to be the delimiter.
+You can use other delimiter:
+
+  @ , ! # : ;*%
+
+  Eg:
+
+    %s/<\/div>/>\span</gc
+    %s@<\/div>@>/span<@gc
+
+    replace '/a/b/c/' with '/x/y/z/'
+
+    %s/\/a\/b\/c\//\/x\/y\/z\//gc
+    %s@\/a\/b\/c\/@\/x\/y\/z\/@gc
+
+
+[1] https://stackoverflow.com/questions/2465156/how-does-one-escape-backslashes-and-forward-slashes-in-vim-find-search

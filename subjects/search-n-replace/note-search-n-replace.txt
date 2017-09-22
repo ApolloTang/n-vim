@@ -1,6 +1,13 @@
+~~~~~~~~~~~~~
+General help
+~~~~~~~~~~~~~
+
+  :help substitute
 
 
-Ref: http://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim
+~~~~
+NOTE
+~~~~
 
     When Searching, \n and \r behave as you expected:
 
@@ -18,5 +25,5 @@ Ref: http://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim
     carriage return | \r        | don't know |
 
 
-
+  Ref: http://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim
 

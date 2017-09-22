@@ -1,0 +1,10 @@
+To copy or swap values between registers you can use the :let command, for example to copy the contents of the b register to a:
+
+  :let @a=@b
+
+Or copy the contents of the " register to a:
+
+  :let @a=@"
+
+
+https://stackoverflow.com/questions/1502218/copy-from-one-register-to-another

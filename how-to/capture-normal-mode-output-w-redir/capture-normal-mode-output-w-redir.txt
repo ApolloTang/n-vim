@@ -1,0 +1,13 @@
+
+
+
+:cd /path/to/dir
+:redir >name_of_registers_file
+:registers
+:redir END
+:r name_of_registers_file
+:help redir
+
+
+ref:
+https://stackoverflow.com/questions/2573021/how-to-redirect-ex-command-output-into-current-buffer-or-file

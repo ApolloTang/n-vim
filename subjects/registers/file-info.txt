@@ -1,0 +1,16 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yank current file info into clipboard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  :let @* = expand('%:p')   "/ full path
+  :let @* = expand('%:t')   "/ just filename
+  :let @* = expand('%:h')   "/ director path
+  :let @* = expand('%')     "/ relative path
+
+
+  https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+
+
+
+

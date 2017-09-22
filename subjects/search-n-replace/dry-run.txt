@@ -1,0 +1,7 @@
+~~~~~~~
+Dry run
+~~~~~~~
+
+use ’n’ flag to execute dry run:
+
+    %s/<old>/<new>/n

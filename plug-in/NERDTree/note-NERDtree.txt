@@ -1,0 +1,6 @@
+
+[o]  and [go] both open in preview window
+[o]  will move cursor to the preview window
+[go] will keep cursor at NERDtree
+
+[gs] open in a new window split vertically (unlike the normal mode comand 's' here does not mean horizontal split)

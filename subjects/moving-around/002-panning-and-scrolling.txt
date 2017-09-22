@@ -1,24 +1,24 @@
+Pan
 
-:: Panning
+  (n)z.         " Pan current line to middle of screen
+  (n)z<return>  " Pan current line to top of screen
+  (n)z-         " Pan current line to top of screen
 
-    Reposition current line with cursor  (compatible mode)
+Move cursor to:
 
-    z[enter]  to top of screen
-    z.        to middle of screen
-    z-        to bottom of screen
+  (n)H          " move cursor to top of page
+  (n)M          " move cursor to mid of page
+  (n)L          " move cursor to botton of page
 
+Move something to current cursor position:
 
-:: Scrolling
+  (n)<c-D>      " move next half a page to current curson position
+  (n)<c-U>      " move previous  a page to current curson position
 
-  • move cursor full paging
+  (n)<c-F>      " move next     page to current curson position
+  (n)<c-B>      " move previous page to current curson position
 
-        ctr-F   ctr-B
-
-        But I have map
-            ctr-B to "*y
-            ctr-F to "*P
-
-  • move cursor half paging
-
-        ctr-U   ctr-D
+    But I have map
+        <c-B> to "*y
+        <c-F> to "*P
 
