@@ -1,0 +1,8 @@
+brew uninstall vim
+brew uninstall macvim
+brew install vim --with-python3
+brew install macvim --with-python3 --HEAD
+
+Remove anaconda from PATH prior to above command
+
+

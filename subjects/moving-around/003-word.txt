@@ -46,6 +46,9 @@ letter/digit/underscore and punctuation
 
     w88d,  w88d.  w88d;  w88d:  w88d"  w88d'  w88d(  w88d)  w88d[  w88d]
     ,w88d  .w88d  ;w88d  :w88d  "w88d  'w88d  (w88d  )w88d  [w88d  [w88d
+    w_-88d]
+
+    w88d_,  _w88d.  _w88d;  w8_8d:  w8__8d"  __w88d'  w88d_(  w88d__)  w_88d[
 
 Surround
 

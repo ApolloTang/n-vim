@@ -1,8 +1,15 @@
-Pan
+Pan (cursor moves with page)
 
-  (n)z.         " Pan current line to middle of screen
-  (n)z<return>  " Pan current line to top of screen
-  (n)z-         " Pan current line to top of screen
+  (n)zt         " Pan current line to top of screen
+  (n)zz         " Pan current line to middle of screen
+  (n)zb         " Pan current line to top of screen
+
+      Note that the following are equivalent
+      --------------------------------------
+      (n)zt = (n)z<return>  " Pan current line to top of screen
+      (n)zz = (n)z.         " Pan current line to middle of screen
+      (n)zb = (n)z-         " Pan current line to top of screen
+
 
 Move cursor to:
 
@@ -10,7 +17,8 @@ Move cursor to:
   (n)M          " move cursor to mid of page
   (n)L          " move cursor to botton of page
 
-Move something to current cursor position:
+
+Move something to current cursor position (cursor does not move, page move):
 
   (n)<c-D>      " move next half a page to current curson position
   (n)<c-U>      " move previous  a page to current curson position

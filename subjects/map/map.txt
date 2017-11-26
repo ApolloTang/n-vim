@@ -1,0 +1,10 @@
+:redir! > vim_keys.txt
+:silent verbose map
+:redir END
+
+https://stackoverflow.com/questions/7642746/is-there-any-way-to-view-the-currently-mapped-keys-in-vim
+
+
+tutorial on map
+
+http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)

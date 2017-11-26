@@ -1,0 +1,14 @@
+
+
+https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes
+
+Normal mode
+===========
+  This is the mode vim start with
+
+
+Command-line mode (last-line mode)
+==================================
+
+  The mode when you press ':' from normal mode
+

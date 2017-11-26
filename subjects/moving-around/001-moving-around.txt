@@ -27,7 +27,8 @@
 ::: Document
 
     first/last line of document
-         1G   /  G
+         1G  /  G
+         gg  /  g
 
 
 

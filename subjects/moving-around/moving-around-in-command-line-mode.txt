@@ -1,0 +1,13 @@
+
+Moving around in  command line
+==============================
+  This topic also exit in: vim-mode/mod-command-line.txt
+
+  "/ moving aroung in command mode
+  "/ https://stackoverflow.com/a/15852162/3136861
+  cnoremap <c-h> <left>
+  cnoremap <c-l> <right>
+
+  https://stackoverflow.com/questions/2075569/how-can-i-move-around-in-the-vim-command-line
+
+

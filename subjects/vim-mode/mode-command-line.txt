@@ -1,0 +1,29 @@
+
+Adding a command
+================
+  https://superuser.com/questions/93492/how-to-add-a-command-in-vim-editor
+
+  Eg:
+    command Cdhbs call DeleteHiddenBuffers() <bar> :echo ":call DeleteHiddenBuffers()"
+
+
+multiple commands
+=================
+
+  https://stackoverflow.com/questions/3249275/vim-multiple-commands-on-same-line
+  https://superuser.com/questions/486905/why-does-vim-say-there-are-trailing-characters-on-this-command
+
+  Eg:
+    command Cdhbs call DeleteHiddenBuffers() <bar> :echo ":call DeleteHiddenBuffers()"
+
+
+Movement in command line mode
+=============================
+  This topic also exist in: moving-around/moving-around-in-command-line-mode.txt
+
+  from command-line mode, you can enter command-line edit window (:help cmdwin) with <c-f>
+  ( https://stackoverflow.com/questions/39974942/how-to-move-cursor-effectively-in-last-line-mode-of-vi )
+
+
+
+
