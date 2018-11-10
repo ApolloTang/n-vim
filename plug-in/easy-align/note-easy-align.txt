@@ -1,0 +1,8 @@
+
+
+
+https://github.com/junegunn/vim-easy-align
+
+normal mode <shift-v>4jga**, this would align all the comma on the normal mode line selection (4 line in this case)
+
+

@@ -10,6 +10,8 @@
          ^   /   g_
 
 
+::: Screen line
+
     go to the end of screen line
         g$
 
@@ -23,12 +25,11 @@
          e E  /  ge gE              <--- lower case ignore punctuation
 
 
-
 ::: Document
 
     first/last line of document
          1G  /  G
-         gg  /  g
+         gg  /  G
 
 
 

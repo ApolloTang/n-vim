@@ -24,6 +24,7 @@ Movement in command line mode
   from command-line mode, you can enter command-line edit window (:help cmdwin) with <c-f>
   ( https://stackoverflow.com/questions/39974942/how-to-move-cursor-effectively-in-last-line-mode-of-vi )
 
+  https://stackoverflow.com/questions/2075569/how-can-i-move-around-in-the-vim-command-line
 
 
 
