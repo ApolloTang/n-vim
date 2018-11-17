@@ -1,0 +1,5 @@
+
+in "insert mode" press <c-v><tab>
+
+
+https://stackoverflow.com/questions/4781070/how-to-insert-tab-character-when-expandtab-option-is-on-in-vim
