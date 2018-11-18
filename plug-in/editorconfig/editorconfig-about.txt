@@ -1,0 +1,5 @@
+To check who set tabstop:
+
+  :verbose set tabstop?
+
+https://stackoverflow.com/questions/31295455/how-do-i-make-vim-respect-editorconfig
