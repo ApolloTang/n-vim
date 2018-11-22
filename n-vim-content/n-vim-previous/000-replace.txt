@@ -1,0 +1,9 @@
+
+cc and S are synonyms, 
+	replace the whole line(s) with your edit.
+
+C and c$ are synonyms. 
+	replaces the rest of the line (starting at cursor position) with your edit.
+	
+R overstrike mode
+r replace one character (return to normal mode)	

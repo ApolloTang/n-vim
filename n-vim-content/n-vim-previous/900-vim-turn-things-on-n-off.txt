@@ -1,0 +1,12 @@
+::: line number 
+set nu
+set nu!
+
+::: show end of line
+set list
+set list!
+
+
+::: compatible mode
+set cp
+set nocp

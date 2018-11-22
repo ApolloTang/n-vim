@@ -1,0 +1,6 @@
+::::::
+
+:ZZ                            same as :wq
+:e!                            returns you the last saved version of the file
+:w {pathname}/{filename}
+:!rm {filename}                unix comand remove file

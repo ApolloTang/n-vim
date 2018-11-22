@@ -1,0 +1,7 @@
+:set autoindent                "turn on indent'
+:set hlsearch                  "highlight search result
+:set syntax or (set syntax=sh) "turns on syntax highlighting
+:set nu                         "show line number
+
+
+The ultimate vimrc on Github:  http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github

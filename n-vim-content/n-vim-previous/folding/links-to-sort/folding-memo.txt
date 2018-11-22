@@ -1,0 +1,38 @@
+Vim folding commands
+
+
+
+*Current* 
+
+    Open one/all fold here
+        zo / zO
+
+    Close one/all fold here
+        zc / zC
+
+*All*
+
+    more/reduce foldlevel by one
+        zm / zr
+
+    more/reduce ALL foldlevel  
+        zM / zR
+
+
+* movement *
+
+    Moves cursor to next/previous fold
+        zj  / zk
+
+    move to start/end of open fold
+        [z / ]z
+
+- - - - - - - - - - - - - - - - - - - - - - - - -
+
+zf#j creates a fold from the cursor down # lines.
+zf/string creates a fold from the cursor to string .
+
+zd deletes the fold at the cursor.
+zE deletes all folds.
+
+

@@ -1,0 +1,12 @@
+
+
+:: inserting
+
+A       Append text at the end of current line
+o       Open line below the current line and enter insert mode
+O       Open line above the current line and enter insert mode
+
+
+
+
+

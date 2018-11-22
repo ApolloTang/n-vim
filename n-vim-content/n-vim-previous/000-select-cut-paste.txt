@@ -1,0 +1,20 @@
+:: Paste from buffer
+
+    :put +      will paste after the current line
+    :put! +     will paste before the current line
+    :123 put +  will paste after line 123
+    
+    
+:::select and paste:
+
+
+    v-mode: 
+        jkhl to highlight
+        "*y  to copy selected text to buffer
+        jkhl to move to location you want to paste
+        "*p  to pasteselect and paste:
+
+
+::: select an entire file in visual mode very quickly
+
+     ggVG in normal mode

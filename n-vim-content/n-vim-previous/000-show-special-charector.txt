@@ -1,0 +1,10 @@
+
+to show space character: 
+
+/\s
+:set hlsearch
+
+
+ref
+
+http://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character

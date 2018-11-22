@@ -1,0 +1,6 @@
+
+
+
+DON'T DO THIS IN MINGW32
+:sh        <- b/c I don't know how to get back to vi after entering shell
+
