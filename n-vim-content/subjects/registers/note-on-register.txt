@@ -1,0 +1,156 @@
+X11 Global store
+    1. selections (own by application)
+        1a. PRIMARY (use by "*, copy/paste w mouse highlight/middle button)
+        1b. SECONDARY (ill-defiened x11 spec, not use by vim)
+        1c. CLIPBOARD (use by "+, used by application cut/copy/paste, not available in xterm)
+    2. cut-buffers (own by x-server)
+        There are 8 cut-buffers: CUT_BUFFER0..CUT_BUFFER7
+
+
+
+You can :set clipboard=unnamed or :set clipboard=unnamedplus to make
+all yanking/deleting operations automatically copy to the system clipboard.
+This could be an inconvenience in some cases where you have already storing
+something else in the clipboard as it will override it.
+
+
+
+Here are how registed are use:
+
+"" the unamed register:
+-----------------------
+
+    filling the unnamed reg
+    ```````````````````````
+
+       The unamed register will fill with:
+
+          • text deleted with "d", "dd", "c", "s", "x", "X", "r" commands
+          • text copy with "y", "yy"
+
+       Text are copy to this register *regardless* of whether or not
+       other register was used ( however, one exception is the '_' register).
+
+   [pasting from unname reg]
+
+        When pasting text with 'P' or 'p" command without specify a register,
+        the content of unname register is paste to your buffer.
+
+        Although unecessary, you can specfiy unamed register
+        with double quote with 'p' or 'P' like '""P' or '""p'.
+
+
+The number register: "0 to "9
+-----------------------------
+
+ • Numbered register 0 contains the text from the most recent yank command ('y' or 'yy').
+ • Numbered register 1 contains the text form the most recent deleted *LINE* or change *LINE* command.
+
+       However, the above will not happened if the commands (yanks, deleted line or change line)
+       specified a specific register. In this case, text will go to the specified register.
+
+       Note that, the above mentioned "*LINE*". If the deletion is less than a line,
+       the text goes to '-', teh small deletion buffer.
+
+
+
+
+
+
+    "1 recent (line) delete
+    "* recent yank and delete (with :set clipboard=unamed)
+    "- recent delete less then one line
+
+Copying/pasting from the system clipboard will not work if
+    :echo has('clipboard') returns 0.
+
+Ref:
+:help clipboard
+:help registers
+:help x11-selection
+:help copy-move
+http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
+http://usevim.com/2012/04/13/registers/
+------------------------------------------------------------------------------------------------------
+
+
+    Behaviour of deleting without specified register
+    ````````````````````````````````````````````````
+
+        The following will fill "unnamed and "_ :
+
+            x
+            {visual}d
+            {visual}x
+
+
+    If you specified a register the behaviour is different:
+
+    Behaviour of 'x' to numbered register
+    `````````````````````````````````````
+
+        "0x  fills: " "1 "0
+        "1x  fills: " "1 "2
+        "2x  fills: " "1 "3
+        "3x  fills: " "1 "4
+
+        The resulting pattern is: "Nx  fills: " "1 "(N+1)
+
+        Here is the internal mechanism:
+
+            before "3x
+                    12345689
+                    abcdefgh
+
+            after "3x
+                step 1
+                    12345689
+                    abXdefgh
+                      ^
+
+                step 2
+                    12345689
+                    ?abXdefgh
+                     >>>>>>>>
+
+                step 3
+                    12345689
+                    XabXdefgh
+                    ^
+
+
+        Special case for "0
+
+            before "0x
+                    012345689
+                    ?abcdefgh
+
+            after  "0x
+                step 1
+                    012345689
+                    Xabcdefgh
+                    ^
+
+                step 2
+                    012345689
+                    ?Xabcdefgh
+                     >>>>>>>>
+
+                step 3
+                    012345689
+                    XXabcdefgh
+                    ^>>>>>>>>>
+
+
+
+
+------ below are draft --------
+
+        "ax  fills: " "1 "a
+        "bx  fills: " "1 "b
+
+The following will fill the specified register "R and "_ (where R is 1-9a-zA-Z)
+
+    can do "0x but cannot do "0d
+
+

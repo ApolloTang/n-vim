@@ -1,0 +1,7 @@
+
+
+{n} xp   == Transpose the charecter under cursor with next character
+{n} ddp  == Transpose current line with next line
+{n} yyp  == duplicate line
+
+
