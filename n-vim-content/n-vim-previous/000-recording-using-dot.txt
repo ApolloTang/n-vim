@@ -1,0 +1,79 @@
+
+
+    USE CASE: insert recorded at the end of every line
+
+        
+        A{type some thing}[Esc]
+        |                   |
+      start                end
+    recording           recording
+
+       "." = "A{type some thing}[Esc]"   
+       
+       note: "." include {start-insert-mode}  and [Esc]
+     
+        j.
+        j.
+        j.
+
+    USE CASE: insert recorded at the begining of every line
+    
+        j0.
+        j0.
+        j0.
+        j0.
+        
+        
+    
+    
+        
+    
+    
+::::  more :::::::::::::::::::
+
+
+dot records following Normal mode commands
+    x
+    dd
+    >
+    
+dot records from the momment we enter:
+    i
+    a
+    A
+
+// - - - - - - - - - - - - - -- - - - - - - - - - - - - 
+
+:**: "." command :**:
+
+    "." start record when you are in normal mode and press:
+        i   [insert at current posision
+        I   [prepand before current line]
+        a   [append after current charector]
+        A   [append after current line]
+        dd  [delete current]
+        >   [indent]
+        s   [substitute with string]
+        r   [replace]
+    and stop recording when you press <Esc>
+
+    USE CASE: insert something at the end of every line
+
+        $a{type some thing}<Esc>j
+        nr---------------------rn
+
+        $.j
+        $.j
+        $.j
+        "." = "a{type some thing}<Esc>"
+
+        
+        A{type some thing}<Esc>j
+        r---------------------rn
+
+        .j
+        .j
+        .j
+        "." = "A{type some thing}<Esc>"
+        "A" = "$a"
+            

@@ -1,0 +1,13 @@
+
+Wrap long lines in .vimrc
+``````````````````````````
+  Here is example on how to wrap long lines in .vimrc
+
+    set listchars=
+      \tab:·\ , "/ note there is a space before comma
+      \trail:·,
+      " \eol:¬
+
+Ref:
+  https://stackoverflow.com/questions/8006117/wrap-long-lines-in-vimrc
+  :help line-continuation

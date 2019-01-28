@@ -1,0 +1,5 @@
+:::
+
+:echo $VIM
+:echo $HOME
+:echo $MYVIMRC

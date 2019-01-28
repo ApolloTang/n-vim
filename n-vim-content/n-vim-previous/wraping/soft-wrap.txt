@@ -1,0 +1,19 @@
+http://vimcasts.org/episodes/soft-wrapping-text/
+
+
+toggling soft warp of text
+:set wrap linebreak nolist
+:set nowrap nolinbreak list
+
+:set showbreak='+++  '
+
+
+::: 
+set wrapmargin=10
+
+the above will ask vi to insert a newline character 10 characters
+from the right margin. (does not affact existing line)
+
+
+
+

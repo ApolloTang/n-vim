@@ -1,0 +1,55 @@
+:set expandtab    "insert space characters whenever the tab key is pressed
+:set tabstop=4    "each tab key press = 4 space  (will not alter existing tab setting)
+:set shiftwidth=4 "number of characters insered for indentation
+
+
+ 
+:retab            "refresh all tab to current tab settings
+
+
+
+
+---------------------------------------
+
+
+:: expandtab/noexpandtab
+	When expandtab is set, hitting Tab in insert mode produce 
+	the number of spaces set in tabstop.
+
+
+:: tabstop=X
+
+	Set the number of columns a tab counts for. 
+	This is the only command here that will affect how existing text displays.
+		Linux kernel code expects each tab to be eight columns wide. 
+		Visual Studio expects each tab to be four columns wide. 
+		
+    meaning:
+		
+
+
+:: shiftwidth=X
+
+	Set how many columns text is indented with the 
+	reindent operations (<< and >>) and automatic C-style indentation.
+	
+:: softtabstop=X
+
+	Set how many columns vim uses when you hit Tab in insert mode. 
+
+		If ( softtabstop < tabstop ) &&  (expandtab is not set) 
+			mix tabs and spaces to make up the desired spacing. 
+
+		If ( softtabstop = tabstop ) && (expandtab is not set) 
+			vim will always use tabs. 
+
+		If expandtab is set, use the appropriate number of spaces.	
+	
+
+Example:
+
+:set softtabstop=4 shiftwidth=4 expandtab
+	Each indentation level is 4 spaces.
+
+	
+	

@@ -1,0 +1,3 @@
+cc and S are synonyms, they replace the whole line(s) with your edit.
+
+C and c$ are synonyms. replaces the rest of the line (starting at cursor position) with your edit.

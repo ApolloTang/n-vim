@@ -1,0 +1,17 @@
+::::
+
+0       to the beginning of the current line
+^       to the 1st non-whitespace character on the current line
+$       To the end of the current line
+w       To the beginning of next word || to next punctuation characters
+W       To the beginning of next word (ignore puctuation)
+b       To the beginning of previous word || to previous punctuation characters.
+B       To the beginning of previous word, ignoreing punctuation characters
+
+
+
+:: goto
+
+{num}G   goto line
+G       goto last line
+1G      goto frist line

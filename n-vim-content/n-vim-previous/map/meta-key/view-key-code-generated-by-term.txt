@@ -1,0 +1,7 @@
+$ sed -n l
+
+http://stackoverflow.com/questions/5379837/is-it-possible-to-mapping-alt-hjkl-in-insert-mode
+
+
+
+

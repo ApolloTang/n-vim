@@ -1,0 +1,36 @@
+
+
+
+::: line
+
+    begining/end of a line
+         0   /   $
+
+    first/last charecter of a line
+         ^   /   g_
+
+
+::: Screen line
+
+    go to the end of screen line
+        g$
+
+
+::: word
+
+    begining of word (next/previous)
+         w W  /  b B                <--- lower case ignore punctuation
+
+    end of word (next/previous)
+         e E  /  ge gE              <--- lower case ignore punctuation
+
+
+::: Document
+
+    first/last line of document
+         1G  /  G
+         gg  /  G
+
+
+
+
