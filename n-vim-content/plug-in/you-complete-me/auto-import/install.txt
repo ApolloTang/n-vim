@@ -1,0 +1,3 @@
+
+~/.vim/plugged/YouCompleteMe/third_party
+$ npm i -g --prefix tsserver typescript
