@@ -1,0 +1,15 @@
+
+Ref: https://github.com/Valloric/YouCompleteMe
+
+~/.vim/plugged/YouCompleteMe
+$ /usr/bin/python ./install.py
+
+Don't use conda's python to install. ycmd server will don't start
+if you use conda's python.
+Ref: https://stackoverflow.com/a/54231652/3136861
+
+
+later I found out at work computer that, I can also use python3:
+$ python3 ./install.py
+
+

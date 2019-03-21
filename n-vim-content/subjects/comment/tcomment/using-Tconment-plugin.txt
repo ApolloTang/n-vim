@@ -9,6 +9,11 @@
         <c-_>b
 
     note: for vac to work you need to set correct filetype and syntax
+    note later:
+      can't remember where vac is read, could be:
+      https://github.com/glts/vim-textobj-comment
+
+
 
 
 :: inline c style comment of word
